@@ -1,4 +1,5 @@
 const pkg = require('./package')
+require('dotenv').config()
 
 module.exports = {
   mode: 'universal',
@@ -17,7 +18,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: 'https://maps.googleapis.com/maps/api/js' }
+      { src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBn4qccSb94hW5YpEJFh3XJ0cquCAlxGps' }
     ]
   },
 
@@ -43,7 +44,10 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+
+    ['@nuxtjs/dotenv', { path: '/.env' }],
+
   ],
   /*
   ** Axios module configuration

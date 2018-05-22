@@ -34,7 +34,7 @@ export default {
   methods: {
     async search () {
       try {
-        this.district = await this.$axios.$get('http://localhost:5000/ubigeos/' + this.ubigeo)
+        this.district = await this.$axios.$get('/ubigeos/' + this.ubigeo)
       } catch (e) {
         this.district = null
       }
