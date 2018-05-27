@@ -1,11 +1,21 @@
 <template>
-  <section class="">
-    <form @submit.prevent="search">
-      <input v-model="ubigeo" pattern="^\d{6}$" required>
-    </form>
-    <div ref="map" class="map"></div>
-    <div v-if="district" class="">
-      {{ district.properties.c_distrito }}
+  <section>
+    <div class="">
+      <div class="pdq-logo">
+        <img src="https://prodequa.com/optimized/img/logo.png" alt="">
+      </div>
+      <div class="form">
+        <form @submit.prevent="search">
+          <label for="code"><strong>Código Ubigeo: </strong></label>
+          <input v-model="ubigeo" id="code" pattern="^\d{6}$" required>
+        </form>
+      </div>
+      <div class="container">
+        <div ref="map" class="map"></div>
+        <div v-if="district" class="">
+          {{ district.properties.c_distrito }}
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -75,7 +85,27 @@ export default {
 
 <style>
 .map {
-  width: 600px;
+  width: 800px;
+  margin: 0 auto;
   height: 400px;
+}
+@media (max-width: 800px) {
+  .map {
+    width: 100%;
+  }
+}
+.pdq-logo {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  padding: 1rem 0;
+}
+.form {
+  margin: 2rem 0;
+  text-align: center;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
 }
 </style>
