@@ -2,6 +2,7 @@
   <section>
     <div class="">
       <div class="pdq-logo">
+        <!-- <img src="https://prodequa.com/optimized/img/logo.png" alt=""> -->
         <img src="https://prodequa.com/optimized/img/logo.png" alt="">
       </div>
       <div class="form">
